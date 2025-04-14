@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # Update alpine
-RUN apk update && apk upgrade
+RUN apk -U upgrade
 
 # Install software
 RUN apk add --no-cache \
@@ -9,11 +9,15 @@ RUN apk add --no-cache \
 	git \
 	zsh \
 	curl \
+	mandoc \
 	openssh \
 	sudo \
 	vim \
 	shadow \
 	tmux
+
+# Install the docs for the man
+RUN apk add docs
 
 # Add setup scripts to /opt
 ADD ./setup_scripts /opt/setup_scripts

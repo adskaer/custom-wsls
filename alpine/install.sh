@@ -3,7 +3,6 @@
 # Replace name if we have an argument
 DEFAULTVALUE=Alpine
 NAME="${1:-$DEFAULTVALUE}"
-sed -i "s/$DEFAULTVALUE/$NAME/g" wsl-configuration/wsl-distribution.conf
 sed "s/$DEFAULTVALUE/$NAME/g" wsl-configuration/wsl-distribution.conf.tmpl > wsl-configuration/wsl-distribution.conf
 
 # Build image using Dockerfile(that contains necessary wsl files)
