@@ -25,6 +25,6 @@ ADD ./setup_scripts /opt/setup_scripts
 # Add wsl files to container
 ADD wsl-configuration/wsl-distribution.conf /etc/wsl-distribution.conf
 ADD wsl-configuration/wsl.conf /etc/wsl.conf
-ADD wsl-configuration/alpine.ico /usr/lib/wsl/icon.ico
+ADD wsl-configuration/icon.ico /usr/lib/wsl/icon.ico
 ADD wsl-configuration/oobe.sh /etc/oobe.sh
 
